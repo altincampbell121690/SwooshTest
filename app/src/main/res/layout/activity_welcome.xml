@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/courtBckgrndImage"
+        android:id="@+id/welcomeBckgrndImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -49,8 +49,8 @@
         android:text="@string/sub_text"
         android:textColor="@android:color/white"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@id/courtBckgrndImage"
-        app:layout_constraintStart_toStartOf="@id/courtBckgrndImage"
+        app:layout_constraintEnd_toEndOf="@id/welcomeBckgrndImage"
+        app:layout_constraintStart_toStartOf="@id/welcomeBckgrndImage"
         app:layout_constraintTop_toBottomOf="@id/mainText" />
 
     <TextView
@@ -62,12 +62,12 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@id/courtBckgrndImage"
-        app:layout_constraintStart_toStartOf="@id/courtBckgrndImage"
+        app:layout_constraintEnd_toEndOf="@id/welcomeBckgrndImage"
+        app:layout_constraintStart_toStartOf="@id/welcomeBckgrndImage"
         app:layout_constraintTop_toBottomOf="@id/subText" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getStartedBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
         android:background="@drawable/swoosh_button"
         android:text="@string/get_started_btn"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/courtBckgrndImage"
+        app:layout_constraintBottom_toBottomOf="@+id/welcomeBckgrndImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

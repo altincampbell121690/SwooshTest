@@ -2,6 +2,8 @@
     <string name="app_name">SwooshTest</string>
     <string name="main_text">GO ALL IN</string>
     <string name="sub_text">ON GOING ALL OUT</string>
-    <string name="statement">Find a team in your city, and dominate the league.</string>
-    <string name="get_started_btn">GET STARTED.</string>
+    <string name="statement">Find a team in your city, and dominate the league</string>
+    <string name="get_started_btn">GET STARTED</string>
+    <string name="next_btn">NEXT</string>
+    <string name="desired_league">Desired League</string>
 </resources>
