@@ -1,11 +1,12 @@
-package com.example.swooshtest
+package com.example.swooshtest.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class LifeCycleActivity : AppCompatActivity() {
+class FinishActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_finish)
     }
 }
