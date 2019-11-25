@@ -1,27 +1,53 @@
-package com.example.swooshtest
+package com.example.swooshtest.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
+import com.example.swooshtest.EXTRA_PLAYER
+import com.example.swooshtest.Model.Player
+import com.example.swooshtest.R
 import kotlinx.android.synthetic.main.activity_league_activity.*
-import kotlinx.android.synthetic.main.activity_welcome.*
 
 class LeagueActivity : LifeCycleActivity() {
 
-    var selectedLeague : String? = null
+//    var selectedLeague : String? = null
+
+
+    var player = Player(null, null)
+
+//    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+//        super.onSaveInstanceState(outState, outPersistentState)
+//    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league_activity)
     }
 
-    fun leagueNextClicked(view: View){
+/*    to save the state between rotations I use onsave instance state
+    then i create onRestore Instance state and set the variable to the saved instance
+    like putExtras*/
+
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)!!
+        }
+    }
+
+    fun onLeagueNextClicked(view: View){
         //val skillIntent = Intent(this,)
         //create a new intent
-        if(selectedLeague != null){
+        if( player.league  != null){
             val skillIntent = Intent(this, SkillsActivity::class.java)
-            skillIntent.putExtra(EXTRA_LEAGUE, selectedLeague)
+            skillIntent.putExtra(EXTRA_PLAYER, player)
             //start the intent
             startActivity(skillIntent)
         }else{
@@ -36,20 +62,20 @@ class LeagueActivity : LifeCycleActivity() {
     fun onMensClicked(view:View){
         womensToggleBtn.isChecked = false
         coEdToggleBtn.isChecked= false
-        selectedLeague = "mens"
+        player.league = "men's"
 
     }
 
     fun onWomensClicked(view:View){
         mensToggleBtn.isChecked = false
         coEdToggleBtn.isChecked= false
-        selectedLeague = "womens"
+        player.league  = "women's"
 
     }
 
     fun onCoEdClicked(view:View){
         mensToggleBtn.isChecked = false
         womensToggleBtn.isChecked = false
-        selectedLeague = "coed"
+        player.league  = "coed"
     }
 }

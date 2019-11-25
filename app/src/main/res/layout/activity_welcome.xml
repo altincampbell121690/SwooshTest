@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Controller.MainActivity">
 
     <ImageView
         android:id="@+id/welcomeBckgrndImage"
@@ -32,7 +32,7 @@
         android:id="@+id/mainText"
         android:layout_width="258dp"
         android:layout_height="71dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/main_text"
         android:textColor="@android:color/white"
@@ -56,7 +56,7 @@
     <TextView
         android:layout_width="248dp"
         android:layout_height="53dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/statement"
         android:textAlignment="center"

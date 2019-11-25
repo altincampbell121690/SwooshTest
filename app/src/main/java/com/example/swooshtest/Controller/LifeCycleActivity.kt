@@ -1,4 +1,4 @@
-package com.example.swooshtest
+package com.example.swooshtest.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
